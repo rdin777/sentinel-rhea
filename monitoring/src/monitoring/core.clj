@@ -3,11 +3,11 @@
             [cheshire.core :as json])
   (:gen-class))
 
-;; Конфигурация Rhea Finance
+;; Rhea Finance configuration
 (def rhea-vault-address "0x5Fb0B2315678afecb367f032d93F642f64180aa3")
 (def rpc-url "https://rpc.mantle.xyz")
 
-;; Логика детекции (GT-UltraEngine)
+;; Detection logic (GT-UltraEngine)
 (defn validate-invariant [assets shares]
   (let [ratio (if (pos? shares) (/ assets shares) 0)
         threshold 1.05]
